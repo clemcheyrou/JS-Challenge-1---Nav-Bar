@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>JS Projet 001 - Tic Tac Toe</title>
+		<link rel='stylesheet' href='css/style.css'>
+		<script src="https://kit.fontawesome.com/4660bf32b0.js" crossorigin="anonymous"></script>
+
+	</head>
+	<body>
+		<div class="search-box">
+			<input type="text" class="search-input" placeholder="Type to search...">
+			<div class='search-btn'>
+				<i class="fas fa-search"></i>
+			</div>
+			<div class='cancel-btn'>
+				<i class="fas fa-times"></i>
+			</div>
+		</div>
+
+		<script> 
+			const searchBtn = document.querySelector('.search-btn')
+			const cancelBtn = document.querySelector('.cancel-btn')
+			const searchBox = document.querySelector('.search-box')
+			const searchInput = document.querySelector('.search-input')
+
+			searchBtn.onclick = () => {
+				searchBox.classList.add("active");
+				searchInput.classList.add("active");
+				searchBtn.classList.add("active");
+				cancelBtn.classList.add("active");
+			}
+			cancelBtn.onclick = () => {
+				searchBox.classList.remove("active");
+				searchInput.classList.remove("active");
+				searchBtn.classList.remove("active");
+				cancelBtn.classList.remove("active");
+			}
+		</script>
+	</body>
+</html>
+
